@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Ticket - Khadri Tech Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background: #0a2540;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            margin: 50px auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>🔍 Track Your Ticket</h2>
+</header>
+
+<div class="container">
+    <p>Enter your Ticket ID (e.g. KTS-1)</p>
+
+    <input type="text" id="ticketId" placeholder="KTS-1">
+
+    <br>
+    <button onclick="trackTicket()">Check Status</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+async function trackTicket() {
+    let ticket = document.getElementById("ticketId").value.trim();
+    let resultBox = document.getElementById("result");
+
+    if (!ticket) {
+        resultBox.innerHTML = "<span class='error'>Please enter Ticket ID</span>";
+        return;
+    }
+
+    let sheetURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRw1775xQhrevSoNNlLh9EKGFnoM23SYmlYDhJKSNgOL22qo3CYdKd2EVTy5fxLt-MzVvLXNrWyYsmX/gviz/tq?tqx=out:csv&gid=241528610";
+
+    try {
+        let response = await fetch(sheetURL);
+        let data = await response.text();
+
+        let rows = data.split("\n");
+        let found = false;
+
+        for (let i = 1; i < rows.length; i++) {
+            let cols = rows[i].split(",");
+
+            let ticketId = cols[0];
+            let status = cols[1];
+            let comments = cols[2];
+
+            if (ticketId && ticketId.trim() === ticket) {
+                resultBox.innerHTML =
+                    "<span class='success'>✅ Status: " + status + "</span><br><br>" +
+                    "💬 Comments: " + (comments || "No updates");
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            resultBox.innerHTML = "<span class='error'>❌ Ticket not found</span>";
+        }
+
+    } catch (error) {
+        resultBox.innerHTML = "<span class='error'>Error fetching data</span>";
+    }
+}
+</script>
+
+</body>
+</html>
