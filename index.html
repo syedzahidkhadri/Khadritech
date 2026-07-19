@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Khadri Tech Solutions | Laptop & Chip Level Repair</title>
+<title>Khadri Tech Solutions | Laptop Repair & Chip Level Experts</title>
 
-<meta name="description" content="Professional Laptop Repair, Chip Level Motherboard Repair, Desktop Repair and IT Support.">
+<meta name="description"
+content="Professional Laptop Repair, Chip Level Motherboard Repair, Screen Replacement, Charging Port Repair, Windows Installation and IT Support in Bengaluru.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,271 +21,238 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-
-background:#08111f;
-color:white;
-overflow-x:hidden;
-
+    background:#08111f;
+    color:white;
 }
+
+/* HEADER */
 
 header{
-
-position:fixed;
-width:100%;
-top:0;
-left:0;
-z-index:999;
-background:rgba(7,15,30,.90);
-backdrop-filter:blur(12px);
-padding:18px 8%;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(5,10,20,.95);
+    backdrop-filter:blur(10px);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
 }
 
-.logo{
-
-font-size:30px;
-font-weight:700;
-color:#00d4ff;
-
-}
-
-.logo span{
-
-color:white;
-
+.logo img{
+    height:60px;
 }
 
 nav a{
-
-color:white;
-text-decoration:none;
-margin-left:30px;
-font-weight:500;
-transition:.3s;
-
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
 }
 
 nav a:hover{
-
-color:#00d4ff;
-
+    color:#00d4ff;
 }
+
+/* HERO */
 
 .hero{
-
-height:100vh;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-padding:0 8%;
-
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),
+    rgba(0,0,0,.75)),
+    url('hero-banner.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:140px 8%;
 }
 
-.hero-text{
-
-max-width:600px;
-
+.hero-content{
+    max-width:700px;
 }
 
-.hero-text h4{
-
-color:#00d4ff;
-font-size:18px;
-margin-bottom:15px;
-
+.badge{
+    display:inline-block;
+    padding:10px 20px;
+    border:1px solid #00d4ff;
+    border-radius:50px;
+    color:#00d4ff;
+    margin-bottom:30px;
 }
 
-.hero-text h1{
-
-font-size:58px;
-line-height:70px;
-margin-bottom:25px;
-
+.hero h1{
+    font-size:65px;
+    line-height:75px;
+    margin-bottom:25px;
 }
 
-.hero-text p{
-
-font-size:18px;
-line-height:32px;
-color:#cfcfcf;
-
+.hero p{
+    color:#d0d0d0;
+    font-size:18px;
+    line-height:32px;
 }
 
-.btns{
-
-margin-top:40px;
-
+.hero-buttons{
+    margin-top:35px;
 }
 
 .btn{
-
-display:inline-block;
-padding:15px 35px;
-border-radius:40px;
-text-decoration:none;
-margin-right:20px;
-font-weight:600;
-transition:.3s;
-
-}
-
-.primary{
-
-background:#00d4ff;
-color:#000;
-
-}
-
-.secondary{
-
-border:2px solid #00d4ff;
-color:white;
-
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    margin-right:15px;
+    transition:.3s;
 }
 
 .btn:hover{
-
-transform:translateY(-5px);
-
+    transform:translateY(-5px);
 }
 
-.hero-img{
-
-width:500px;
-
+.call-btn{
+    background:#00d4ff;
+    color:black;
 }
 
-.hero-img img{
-
-width:100%;
-border-radius:30px;
-box-shadow:0 30px 60px rgba(0,212,255,.25);
-
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
 }
+
+.features{
+    margin-top:35px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.feature-box{
+    background:#132238;
+    padding:12px 18px;
+    border-radius:10px;
+}
+
+.feature-box i{
+    color:#00d4ff;
+    margin-right:8px;
+}
+
+/* SERVICES */
 
 section{
-
-padding:100px 8%;
-
+    padding:100px 8%;
 }
 
 .title{
-
-font-size:42px;
-margin-bottom:50px;
-text-align:center;
-
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
 }
 
 .cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .card{
-
-background:#111d31;
-padding:35px;
-border-radius:20px;
-transition:.4s;
-
+    background:#111d31;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.3s;
 }
 
 .card:hover{
-
-transform:translateY(-10px);
-
-background:#162741;
-
+    transform:translateY(-10px);
 }
 
-.card i{
-
-font-size:42px;
-color:#00d4ff;
-margin-bottom:20px;
-
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.card h3{
-
-margin-bottom:15px;
-
+.card-content{
+    padding:25px;
 }
 
-.card p{
-
-line-height:28px;
-color:#cfcfcf;
-
+.card-content h3{
+    margin-bottom:12px;
 }
+
+.card-content p{
+    color:#cfcfcf;
+    line-height:28px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+    background:#111d31;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact p{
+    margin-bottom:15px;
+    color:#dadada;
+}
+
+/* FOOTER */
 
 footer{
-
-padding:30px;
-text-align:center;
-background:#050b15;
-margin-top:60px;
-
+    text-align:center;
+    padding:30px;
+    background:#050b15;
 }
 
-@media(max-width:900px){
+/* MOBILE */
+
+@media(max-width:768px){
 
 .hero{
-
-flex-direction:column;
-padding-top:140px;
-height:auto;
-
+    text-align:center;
 }
 
-.hero-text{
-
-text-align:center;
-
+.hero h1{
+    font-size:40px;
+    line-height:50px;
 }
 
-.hero-text h1{
-
-font-size:40px;
-line-height:50px;
-
-}
-
-.hero-img{
-
-margin-top:50px;
-width:90%;
-
+.features{
+    justify-content:center;
 }
 
 nav{
+    display:none;
+}
 
-display:none;
-
+.logo img{
+    height:50px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -292,58 +260,69 @@ display:none;
 <header>
 
 <div class="logo">
-Khadri<span>Tech</span>
+logo.png
 </div>
 
 <nav>
-
 <a href="#">Home</a>
-<a href="#about">About</a>
 <a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="hero-content">
 
-<h4>Professional Laptop & IT Services</h4>
+<div class="badge">
+✓ Bengaluru's Trusted Repair Experts
+</div>
 
 <h1>
-Laptop Repair<br>
-Chip Level Repair<br>
-IT Solutions
+Laptop Repair &
+Chip-Level Solutions
 </h1>
 
 <p>
-
-Providing reliable laptop repair, motherboard diagnostics,
-chip level repair, software support and IT solutions with
-a focus on quality workmanship and customer satisfaction.
-
+Professional motherboard repair, screen replacement,
+charging port repair, BIOS programming,
+software installation, SSD upgrades and complete
+laptop servicing.
 </p>
 
-<div class="btns">
+<div class="hero-buttons">
 
-<a href="#contact" class="btn primary">
-Contact Us
+tel:+919901096332
+<i class="fas fa-phone"></i>
+Call Now
 </a>
 
-<a href="#services" class="btn secondary">
-Our Services
+https://wa.me/919901096332
+<i class="fab fa-whatsapp"></i>
+WhatsApp
 </a>
 
 </div>
 
+<div class="features">
+
+<div class="feature-box">
+<i class="fas fa-microchip"></i>
+Chip Level Repair
 </div>
 
-<div class="hero-img">
+<div class="feature-box">
+<i class="fas fa-shield-alt"></i>
+Trusted Service
+</div>
 
-<img src="images/hero.jpg" alt="Chip Level Repair">
+<div class="feature-box">
+<i class="fas fa-bolt"></i>
+Fast Turnaround
+</div>
+
+</div>
 
 </div>
 
@@ -358,81 +337,74 @@ Our Services
 <div class="cards">
 
 <div class="card">
+service-repair.jpg
 
-<i class="fas fa-laptop"></i>
-
+<div class="card-content">
 <h3>Laptop Repair</h3>
 
 <p>
-
-Hardware diagnosis, keyboard replacement,
-screen replacement, SSD upgrades and
-complete laptop servicing.
-
+Display replacement, keyboard issues,
+hinge repair, upgrades and complete servicing.
 </p>
 
 </div>
+</div>
 
 <div class="card">
+motherboard-repair.png
 
-<i class="fas fa-microchip"></i>
-
+<div class="card-content">
 <h3>Chip Level Repair</h3>
 
 <p>
-
-Advanced motherboard diagnostics,
-IC replacement, BIOS programming
-and precision soldering.
-
+Advanced motherboard diagnosis,
+IC replacement, BGA rework and BIOS repair.
 </p>
 
 </div>
-
-<div class="card">
-
-<i class="fas fa-desktop"></i>
-
-<h3>Desktop Repair</h3>
-
-<p>
-
-Complete desktop troubleshooting,
-custom PC upgrades and hardware maintenance.
-
-</p>
-
 </div>
 
 <div class="card">
+screen-repair.png
 
-<i class="fas fa-network-wired"></i>
-
-<h3>IT Support</h3>
+<div class="card-content">
+<h3>Screen Replacement</h3>
 
 <p>
-
-Windows, Microsoft 365,
-network troubleshooting,
-system configuration and enterprise IT support.
-
+Cracked screen replacement,
+display repair and LCD troubleshooting.
 </p>
 
+</div>
 </div>
 
 </div>
 
 </section>
 
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 9901096332</p>
+
+<p>📍 Govindarajapura 11th Cross Road, Nagvara, Bengaluru</p>
+
+<p>Laptop Repair • Chip Level Repair • IT Support</p>
+
+https://wa.me/919901096332
+Chat on WhatsApp
+</a>
+
+</section>
+
 <footer>
 
-© 2026 Khadri Tech Solutions
-<br><br>
+© 2026 Khadri Tech Solutions<br><br>
 
-Professional Laptop Repair • Chip Level Repair • IT Support
+Your Device. Our Expertise. Your Satisfaction.
 
 </footer>
 
 </body>
-
 </html>
