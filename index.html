@@ -1,125 +1,438 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Khadri Tech Solutions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f4f4f4;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #0a2540;
-            color: white;
-            padding: 20px;
-        }
+<title>Khadri Tech Solutions | Laptop & Chip Level Repair</title>
 
-        section {
-            padding: 30px 20px;
-        }
+<meta name="description" content="Professional Laptop Repair, Chip Level Motherboard Repair, Desktop Repair and IT Support.">
 
-        h2 {
-            margin-bottom: 15px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 20px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+<style>
 
-        .btn:hover {
-            background: #0056b3;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
 
-        .btn-green {
-            background: #28a745;
-        }
+body{
 
-        .btn-green:hover {
-            background: #1e7e34;
-        }
+background:#08111f;
+color:white;
+overflow-x:hidden;
 
-        .ticket-section {
-            background: #ffffff;
-            margin: 20px;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+}
 
-        footer {
-            background: #0a2540;
-            color: white;
-            padding: 15px;
-        }
-    </style>
+header{
+
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:999;
+background:rgba(7,15,30,.90);
+backdrop-filter:blur(12px);
+padding:18px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.logo{
+
+font-size:30px;
+font-weight:700;
+color:#00d4ff;
+
+}
+
+.logo span{
+
+color:white;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#00d4ff;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 8%;
+
+}
+
+.hero-text{
+
+max-width:600px;
+
+}
+
+.hero-text h4{
+
+color:#00d4ff;
+font-size:18px;
+margin-bottom:15px;
+
+}
+
+.hero-text h1{
+
+font-size:58px;
+line-height:70px;
+margin-bottom:25px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+line-height:32px;
+color:#cfcfcf;
+
+}
+
+.btns{
+
+margin-top:40px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+margin-right:20px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.primary{
+
+background:#00d4ff;
+color:#000;
+
+}
+
+.secondary{
+
+border:2px solid #00d4ff;
+color:white;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.hero-img{
+
+width:500px;
+
+}
+
+.hero-img img{
+
+width:100%;
+border-radius:30px;
+box-shadow:0 30px 60px rgba(0,212,255,.25);
+
+}
+
+section{
+
+padding:100px 8%;
+
+}
+
+.title{
+
+font-size:42px;
+margin-bottom:50px;
+text-align:center;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:#111d31;
+padding:35px;
+border-radius:20px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+background:#162741;
+
+}
+
+.card i{
+
+font-size:42px;
+color:#00d4ff;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+line-height:28px;
+color:#cfcfcf;
+
+}
+
+footer{
+
+padding:30px;
+text-align:center;
+background:#050b15;
+margin-top:60px;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+padding-top:140px;
+height:auto;
+
+}
+
+.hero-text{
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:40px;
+line-height:50px;
+
+}
+
+.hero-img{
+
+margin-top:50px;
+width:90%;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Khadri Tech Solutions</h1>
-    <p>Fast. Reliable. Professional IT Services</p>
+
+<div class="logo">
+Khadri<span>Tech</span>
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
-<section>
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">Laptop Repair</div>
-        <div class="card">MacBook Repair</div>
-        <div class="card">Chip-Level Repair</div>
-        <div class="card">SSD/RAM Upgrade</div>
-        <div class="card">IT Support</div>
-    </div>
+<section class="hero">
+
+<div class="hero-text">
+
+<h4>Professional Laptop & IT Services</h4>
+
+<h1>
+Laptop Repair<br>
+Chip Level Repair<br>
+IT Solutions
+</h1>
+
+<p>
+
+Providing reliable laptop repair, motherboard diagnostics,
+chip level repair, software support and IT solutions with
+a focus on quality workmanship and customer satisfaction.
+
+</p>
+
+<div class="btns">
+
+<a href="#contact" class="btn primary">
+Contact Us
+</a>
+
+<a href="#services" class="btn secondary">
+Our Services
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+
+<img src="images/hero.jpg" alt="Chip Level Repair">
+
+</div>
+
 </section>
 
-<section>
-    <h2>Contact Us</h2>
-    <p>📞 Call: +91 9901096332</p>
-    <p>📍 Bangalore</p>
+<section id="services">
 
-    <a class="btn" href="tel:+919901096332">Call Now</a>
-    <a class="btn btn-green" href="https://wa.me/919901096332" target="_blank">WhatsApp</a>
-</section>
+<h2 class="title">
+Our Services
+</h2>
 
-<!-- 🎫 TICKET SECTION -->
-<section class="ticket-section">
-    <h2>Need Technical Support?</h2>
-    <p>Facing issues with your laptop, desktop, or device?</p>
-    <p>Click below to raise a support ticket. Our team will contact you shortly.</p>
+<div class="cards">
 
-    <a class="btn btn-green" href="https://forms.gle/UUK4Bin7nvvTBpC78" target="_blank">
-        🎫 Raise a Ticket
-    </a>
+<div class="card">
+
+<i class="fas fa-laptop"></i>
+
+<h3>Laptop Repair</h3>
+
+<p>
+
+Hardware diagnosis, keyboard replacement,
+screen replacement, SSD upgrades and
+complete laptop servicing.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-microchip"></i>
+
+<h3>Chip Level Repair</h3>
+
+<p>
+
+Advanced motherboard diagnostics,
+IC replacement, BIOS programming
+and precision soldering.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-desktop"></i>
+
+<h3>Desktop Repair</h3>
+
+<p>
+
+Complete desktop troubleshooting,
+custom PC upgrades and hardware maintenance.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-network-wired"></i>
+
+<h3>IT Support</h3>
+
+<p>
+
+Windows, Microsoft 365,
+network troubleshooting,
+system configuration and enterprise IT support.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Khadri Tech Solutions</p>
+
+© 2026 Khadri Tech Solutions
+<br><br>
+
+Professional Laptop Repair • Chip Level Repair • IT Support
+
 </footer>
 
 </body>
+
 </html>
